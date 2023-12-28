@@ -1,0 +1,193 @@
+{
+  "Judging sheet class database": {
+    "name": {
+      "name": "Name of the sheet",
+      "year": 2020,
+      "non-required": [
+        {
+          "Name": "Nonrequired question",
+          "Description": "Desc of question"
+        }
+      ],
+      "required-section": [
+        {
+          "section1Name": "name of section 1",
+          "levels": [
+            {
+              "Name": "Level name",
+              "Description": "Level desc"
+            },
+            {
+              "Name": "Another level name",
+              "Description": "another Level desc"
+            }
+          ],
+          "questions": [
+            {
+              "Name": "Question name",
+              "Desc": "Question description"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Scoring sheet class database": {
+    "sections": [
+      {
+        "id": "Mission number / inspection etc",
+        "name": "Mission name",
+        "description": "Mission description",
+        "options": {
+          "Option-1": 0,
+          "Option-2": 30
+        }
+      },
+      {
+        "id": "Mission number / inspection etc",
+        "sub-questions": {
+          "question name": {
+            "Option-1": 10,
+            "Option-2": 20
+          },
+          "question 2 name": {
+            "Option-1": 0,
+            "Option-2": 10
+          }
+        }
+      }
+    ]
+  },
+  "Organization database": {
+    "name": "BsonId",
+    "owner": "ownerID",
+    "roles": {
+      "roleId": {
+        "permissions": [
+          "Permission1",
+          "Permission2"
+        ],
+        "types": [
+          "EVENT",
+          "ORGANIZATION"
+        ]
+      }
+    },
+    "members": {
+      "userId": {
+        "Roles": [
+          "roleId1",
+          "roleId2"
+        ],
+        "Permissions": [
+          "Permission1",
+          "Permission2"
+        ]
+      }
+    },
+    "events": [
+      "EventId1",
+      "EventId2"
+    ],
+    "customScoring": {
+    }
+  },
+  "User database": {
+    "userId": {
+      "names": {
+        "languageId": {
+          "firstName": "firstname",
+          "lastName": "lastname"
+        }
+      },
+      "number": "numberIncludingCountryCode",
+      "email": "Email",
+      "associations": {
+        "teams": [
+          "teamIds"
+        ],
+        "orgs": [
+          "orgIds"
+        ],
+        "volunteering": [
+          "orgId-EventId"
+        ]
+      }
+    }
+  },
+  "Team Event Scoring": {
+    "OrgID-EventID-TeamID": {
+      "scores": [
+        {
+          "score": 400,
+          "rating": 2
+        },
+        {
+          "score": 123,
+          "rating": 0
+        }
+      ],
+      "judging": {
+        "optional": [
+          "Optional award 1",
+          "Optional award 2"
+        ],
+        "section-id": {
+          "questions": [
+            {
+              "value": "question-1 value",
+              "feedback": "Feedback if at last stage"
+            }
+          ],
+          "improve": "Feedback",
+          "keep": "Feedback"
+        }
+      }
+    }
+  },
+  "Concrete team database": {
+    "concrete_name": {
+      "owner": "userId",
+      "logo": "imageLink.png",
+      "number": "defaultTeamNumber",
+      "members": [
+        "userA",
+        "userB"
+      ],
+      "assigned": [
+        "orgId-teamNumber"
+      ]
+    }
+  },
+  "Events database": {
+    "EventId": {
+      "judging-class": "judgingsheet-id",
+      "scoring-class": "scoringsheet-id",
+      "teams": [
+        {
+          "id": "concreteTeamID",
+          "inherit": true
+        },
+        {
+          "id": "concreteTeamID",
+          "inherit": false,
+          "number": 932,
+          "logo": "imageLogoLink.png"
+        }
+      ],
+      "name": "BsonId",
+      "members": {
+        "userId": {
+          "Roles": [
+            "roleId1",
+            "roleId2"
+          ],
+          "Permissions": [
+            "Permission1",
+            "Permission2"
+          ]
+        }
+      }
+    }
+  }
+}

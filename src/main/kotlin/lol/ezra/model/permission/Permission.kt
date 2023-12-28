@@ -1,13 +1,27 @@
-package lol.ezra.model
+package lol.ezra.model.permission
 
 enum class Permission {
     /**
      * Organizational Permissions:
      */
     /**
-     * A
+     * Manage users in the organization
      */
     O_MANAGE_USERS,
+
+    /**
+     * Manage events in the organization
+     * Gives complete control to all events
+     */
     O_MANAGE_EVENTS,
-    O_ADMIN,
+
+    /**
+     * Event permissions
+     */
+    /**
+     * Allows the invitation of new users to the event
+     */
+    E_Invite
+
+
 }

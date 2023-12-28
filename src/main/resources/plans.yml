@@ -1,0 +1,12 @@
+Concrete teams vs org teams:
+  Outline problem:
+    I. Having a single database for all teams would mean anyone could claim any number without owning it.
+      a. For example, team flood#932 could claim that it's flood#23 without any verification.
+    II. Different countries include different numberings, so there would be overlap of the numbers
+      a. Team Ranger in Israel has the numbers 973 however in the US 973 is potato pirates.
+  Outline solution:
+    I. Concrete teams - An independent team system that has no relation to a number.
+      a. Concrete teams can be assigned org teams.
+    II. Org teams - The team authorized and managed by an organization running an event.
+      b. This team number can be assigned to a concrete team. It can not be used on other orgs
+

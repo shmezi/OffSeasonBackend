@@ -10,13 +10,10 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-}
 
-tasks.test {
-    useJUnitPlatform()
-}
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
-kotlin {
-    jvmToolchain(8)
+    implementation("org.mongodb:mongodb-driver-kotlin-coroutine:4.10.1")
+
+    implementation("com.github.auties00:whatsappweb4j:3.5.1")
 }

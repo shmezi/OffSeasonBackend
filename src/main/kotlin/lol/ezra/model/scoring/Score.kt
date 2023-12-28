@@ -1,4 +1,3 @@
 package lol.ezra.model.scoring
 
-class Score {
-}
+data class Score(val roboticScore: Int, val gpLevel: GPLevel)

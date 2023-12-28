@@ -1,4 +1,7 @@
 package lol.ezra.model.scoring
 
-class GPLevel {
+enum class GPLevel {
+    DEVELOPING,
+    ACCOMPLISHED,
+    EXCEEEDS
 }

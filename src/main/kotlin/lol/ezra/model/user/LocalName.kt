@@ -1,5 +1,5 @@
 package lol.ezra.model.user
 
-data class LocalNames(
-    val firstName:String,val lastName:String
+data class LocalName(
+    var firstName: String, var lastName: String
 )
